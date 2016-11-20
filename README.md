@@ -1,24 +1,3 @@
-# README
+# Restaurant-Automation-System
+A web application that can be used by restaurant employees (waiters, host and cook) and management to automate the process of ordering food and track the performance.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
