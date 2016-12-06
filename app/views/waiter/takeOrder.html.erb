@@ -1,0 +1,32 @@
+<h1>take order</h1>
+
+<form  action="/waiter/postOrders" method="post" >
+<table>
+  <thead>
+    <tr>
+      <th>choose</th>
+      <th>meal</th>
+      <th>description</th>
+      <th>price</th>
+      <th>number_times_ordered</th>
+      <th>number</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meals.each do |meal| %>
+      <tr>
+       <td><center><input id=<%=meal.id%> type="checkbox" name=orders[<%=meal.id%>] value="1" /></center></td>
+        <td><center><%= meal.name %></center></td>
+        <td><center><%= meal.description %></center></td>
+        <td><center><%= meal.price %></center></td>
+        <td><center><%= meal.number_times_ordered %></center></td>
+        <td><input  name=repitations[<%=meal.id%>] value="1" type="int"/></td>  
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+<input type="hidden" value=<%= @table_id %> name="table_id"/>
+<input  type="submit"   />
+</form>
+<%= link_to "back",waiter_tables_path%>

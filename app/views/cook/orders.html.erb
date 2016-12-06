@@ -1,0 +1,26 @@
+<h1>Cook#orders</h1>
+
+<form  action="/cook/postOrder" method="post" >
+  <table>
+    <thead>
+      <tr>
+        <th>choose</th>
+        <th>Order Id</th>
+        <th>name</th>
+        <th>description</th>
+      </tr>
+    </thead>
+
+    <% @orders.each  do |order|%>
+     <tr>
+       <td><center><input type="checkbox" name=order[<%=order.id%>] value="1" /></center></td>
+       <td><center><%= order.id %></center></td>
+       <td><center><%= Meal.find(order.meal_id).name %></center></td>
+       <td><center><%= Meal.find(order.meal_id).description %></center></td>
+     </tr>
+    
+    <% end %>
+
+  </table>
+  <input type="submit" >
+</form>
