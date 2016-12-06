@@ -66,9 +66,8 @@ def updateOrderStatus
   keyss = params[:order].keys
     i = 0
     while keyss[i] != nil
-      orderSelected = Order.find_by(id:keyss[i])
-      orderSelected.update(status: 2);
-      print orderSelected.meal_id
+      @order = Order.find(keyss[i])
+      @order.update(:status => 2)
       i = i+1
     end
     redirect_to "/waiter/tables"
