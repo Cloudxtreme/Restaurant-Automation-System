@@ -15,7 +15,7 @@ development:
   encoding: utf8
   database: RestaurantAutomationSystem_development
   username: root
-  password: 
+  password: 01061988509
   host: 127.0.0.1
   port: 3306
 # Warning: The database defined as "test" will be erased and
@@ -27,7 +27,7 @@ test:
   database: RestaurantAutomationSystem_test
   username: root
 
-  password: 
+  password: 01061988509
   host: 127.0.0.1
   port: 3306
 
@@ -56,6 +56,6 @@ production:
   database: RestaurantAutomationSystem_production
   username: root
 
-  password: 
+  password: 01061988509
   host: 127.0.0.1
   port: 3306
