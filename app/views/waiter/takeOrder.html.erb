@@ -1,4 +1,4 @@
-<h1>take order</h1>
+<h1>Place a new order for table <%= @table_id %> </h1>
 
 <form  action="/waiter/postOrders" method="post" >
 <table>
@@ -21,7 +21,7 @@
         <td><center><%= meal.description %></center></td>
         <td><center><%= meal.price %></center></td>
         <td><center><%= meal.number_times_ordered %></center></td>
-        <td><input  name=repitations[<%=meal.id%>] value="1" type="int"/></td>  
+        <td><input  name=repitations[<%=meal.id%>] value="1" type="int"/></td>
         </tr>
     <% end %>
   </tbody>
@@ -29,4 +29,4 @@
 <input type="hidden" value=<%= @table_id %> name="table_id"/>
 <input  type="submit"   />
 </form>
-<%= link_to "back",waiter_tables_path%>
+<%= link_to "Back to choose another table to place order",waiter_tables_path%>

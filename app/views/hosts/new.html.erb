@@ -1,5 +1,6 @@
-<h1> hello from hosttttt </h1>
-<h1> Available Free Tables </h2>
+<h1> Welcome Host </h1>
+
+<h2>Free Tables </h2>
 
 <% Array(@avail_tables).each do |table| %>
   <tr>
@@ -7,7 +8,7 @@
     </br>
   </tr>
 <% end %>
-<h1> Busy Tables </h2>
+<h2> Busy Tables </h2>
 <% Array(@busy_tables).each do |table| %>
   <tr>
     <td><%= table.name %><td>

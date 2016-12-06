@@ -1,4 +1,6 @@
-<h1>Cook#orders</h1>
+<h1>Cook Orders</h1>
+
+<p> Mark finished meals and submit to be delivered by waiter </p>
 
 <form  action="/cook/postOrder" method="post" >
   <table>
@@ -18,7 +20,7 @@
        <td><center><%= Meal.find(order.meal_id).name %></center></td>
        <td><center><%= Meal.find(order.meal_id).description %></center></td>
      </tr>
-    
+
     <% end %>
 
   </table>

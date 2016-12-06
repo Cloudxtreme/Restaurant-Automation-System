@@ -12,6 +12,8 @@
         <li><%= current_employee.email %></li>
         <li><%= link_to "Log out", logout_path, method: "delete"%></li>
       </ul>
+      <%else%>
+      <h1> leeh keda </h1>
     <% end %>
     <%= yield %>
   </body>

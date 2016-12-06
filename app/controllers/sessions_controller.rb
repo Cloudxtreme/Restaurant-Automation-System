@@ -8,13 +8,13 @@ class SessionsController < ApplicationController
   if @employee && @employee.authenticate(params[:session][:password])
     session[:employee_id] = @employee.id
     if session[:employee_id] == 1
-    redirect_to '/waiter'
+    redirect_to '/waiter/tables'
    elsif session[:employee_id] == 2
       redirect_to '/manager'
    elsif session[:employee_id] == 3
         redirect_to '/host'
    elsif session[:employee_id] == 4
-          redirect_to '/cook'
+          redirect_to '/cook/orders'
    end
   else
     redirect_to '/login'
