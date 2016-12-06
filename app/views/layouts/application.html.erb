@@ -3,12 +3,17 @@
   <head>
     <title>RestaurantAutomationSystem</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <% if current_employee %>
+      <ul>
+        <li><%= current_employee.email %></li>
+        <li><%= link_to "Log out", logout_path, method: "delete"%></li>
+      </ul>
+    <% end %>
     <%= yield %>
   </body>
 </html>

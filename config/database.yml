@@ -15,7 +15,7 @@ development:
   encoding: utf8
   database: RestaurantAutomationSystem_development
   username: root
-  password:
+  password: menna
   host: 127.0.0.1
   port: 3306
 # Warning: The database defined as "test" will be erased and
@@ -26,7 +26,7 @@ test:
   encoding: utf8
   database: RestaurantAutomationSystem_test
   username: root
-  password:
+  password: menna
   host: 127.0.0.1
   port: 3306
 
@@ -54,6 +54,6 @@ production:
   encoding: utf8
   database: RestaurantAutomationSystem_production
   username: root
-  password: 
+  password: menna
   host: 127.0.0.1
   port: 3306
