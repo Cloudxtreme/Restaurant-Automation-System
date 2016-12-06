@@ -46,4 +46,18 @@ class WaiterControllerTest < ActionDispatch::IntegrationTest
    after_order = Meal.find(meal_id).number_times_ordered
    assert_not_equal before_order, after_order
  end
+  
+  test"should updateOrder status to delivered when waiter delivers orders" do
+   
+    table_id = Table.last.id
+    meal_id = Meal.last.id
+    order1 = Order.create(:status => 1 , :table_id => table_id , :meal_id => meal_id)
+     id1 = order1.id
+    order2 = Order.create(:status => 1 , :table_id => table_id , :meal_id => meal_id)
+    id2 = order2.id
+    post waiter_updateOrderStatus_url, params: {order: { id1 => "1" ,id2 =>"1"}};
+    assert_equal 2, Order.find(id2).status
+    assert_equal 2, Order.find(id1).status
+ end
+  
 end
