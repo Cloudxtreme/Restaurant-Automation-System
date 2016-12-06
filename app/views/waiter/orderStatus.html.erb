@@ -1,0 +1,21 @@
+<h1>List of ready meals:</h1>
+<form  action="/waiter/updateOrderStatus" method="post" >
+<table>
+  <thead>
+    <tr>
+      <th>Table</th>
+      <th>Meal</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orderStat.each do |p| %>
+      <tr>
+      	<td><center><input type="checkbox" name="order[<%=p.id %>]" value="1" /></center></td>
+        <td><center><%= Table.find(p.table_id).name %></center></td>
+        <td><center><%= Meal.find(p.meal_id).name %></center></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+<input input = "Sub" type="submit"  />

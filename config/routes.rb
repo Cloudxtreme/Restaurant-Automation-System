@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'waiter/orderStatus'
+  post 'waiter/updateOrderStatus'
+  post 'waiter/updateStatusOrders2'
+
   get 'waiter/takeOrder'
 
   get 'waiter/tables'

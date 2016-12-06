@@ -1,4 +1,5 @@
 class CookController < ApplicationController
+  before_action :require_waiter, only: [:postOrder, :orders ]
   protect_from_forgery
 
   def orders
