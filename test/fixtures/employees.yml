@@ -1,9 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 waiter:
-  name: MyString
-  position: "1"
+  name: ola
+  position: waiter
+  password_digest: "123456"
+  email: waiter@yahoo.com
+
+manager:
+  name: ola
+  position: manager
+  password_digest: "123456"
 
 cook:
-  name: MyString
-  position: "4"
+  name: ola
+  position: host
+  password_digest: "123456"
+
+cook:
+  name: ola
+  position: cook
+  password_digest: "123456"

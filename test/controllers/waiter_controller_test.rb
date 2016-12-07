@@ -1,6 +1,12 @@
 require 'test_helper'
 
 class WaiterControllerTest < ActionDispatch::IntegrationTest
+
+  def setup
+    @waiter_id = Employee.all[0]
+  #  post login_url , params: {session: { "email" => employees(:waiter).email , "password"=> employees(:waiter).password_digest }};
+  end
+
   test "should get takeOrder" do
     get waiter_takeOrder_url
     assert_response :success
