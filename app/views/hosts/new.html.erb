@@ -1,5 +1,7 @@
 <h1> Welcome Host </h1>
-
+<%= link_to("checkin","/hosts/checkin") %>
+<%= link_to("checkout","/hosts/checkout") %>
+<%= link_to("Tables Statuses","/host") %>
 <h2>Free Tables </h2>
 
 <% Array(@avail_tables).each do |table| %>

@@ -1,0 +1,26 @@
+<%= link_to("checkin","/hosts/checkin") %>
+<%= link_to("checkout","/hosts/checkout") %>
+<%= link_to("Tables Statuses","/host") %>
+<h1>Available tabels</h1>
+<table>
+
+	<thead>
+		 <tr>
+		     <th>Table </th>
+		     <th>Reserved</th>
+		 </tr>
+	</thead>
+
+	<tbody>
+         <%@tabels.each do |t| %>
+             <tr>
+             	<th><%= t.name %></th>
+             	<td><%= button_to 'Reserved', {:controller => "hosts", :action => "updateStatusTables", :tabel_id => t.id, :method=>:post}  %></td>
+
+
+             </tr>
+         <% end %>
+	</tbody>
+
+
+</table>

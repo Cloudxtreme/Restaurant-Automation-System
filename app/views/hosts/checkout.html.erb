@@ -1,0 +1,25 @@
+<%= link_to("checkin","/hosts/checkin") %>
+<%= link_to("checkout","/hosts/checkout") %>
+<%= link_to("Tables Statuses","/host") %>
+<h1>Free Tabels</h1>
+<table>
+
+	<thead>
+		 <tr>
+		     <th>Table </th>
+		     <th>Bill</th>
+		 </tr>
+	</thead>
+
+	<tbody>
+         <% @checkOutTabels.each do |t| %>
+             <tr>
+             	<th><%= t.name %></th>
+             	<td><%= button_to 'bill', {:controller => "hosts", :action => "TabelBill", :tabel_id => t.id, :method=>:post}  %></td>
+
+             </tr>
+         <% end %>
+	</tbody>
+
+
+</table>

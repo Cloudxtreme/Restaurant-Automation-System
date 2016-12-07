@@ -1,0 +1,31 @@
+
+<%= link_to("checkin","/hosts/checkin") %>
+<%= link_to("checkout","/hosts/checkout") %>
+<%= link_to("Tables Statuses","/host") %><h1>Tabel Bill</h1>
+<table>
+
+	<thead>
+		 <tr>
+		     <th>Meal </th>
+		     <th>Price</th>
+		 </tr>
+	</thead>
+
+	<tbody>
+         <% @Details.each do |d| %>
+             <tr>
+             	<th><%= d.name %></th>
+             	<th><%= d.price %></th>
+             </tr>
+         <% end %>
+	</tbody>
+
+
+</table>
+<h3>Total = <%= @sum%></h3>
+
+
+
+
+<%= link_to("checkin","/hosts/checkin") %>
+<%= link_to("checkout","/hosts/checkout") %>

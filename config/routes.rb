@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   post 'cook/postOrder'
   post 'waiter/postOrders'
   get 'cook/orders'
-
-
+  get 'hosts/checkin'
+  get 'hosts/checkout'
+  post 'hosts/updateStatusTables'
+  post 'hosts/TabelBill'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/login' => 'sessions#new'
