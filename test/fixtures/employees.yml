@@ -1,22 +1,27 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 waiter:
-  name: ola
+  name: waiter
   position: waiter
-  password_digest: "123456"
-  email: waiter@yahoo.com
+  password_digest: '$2a$10$RdJNx3KSRVugdoHNNlUI4elQq8dF.C12ZWn8HWp1070fD847yxb3.'
+  email: waiter@gmail.com
 
 manager:
-  name: ola
+  name: manager
   position: manager
-  password_digest: "123456"
+  password_digest: '$2a$10$5b5erjCX7zdhnnK4lR/ahulgjI0cVEIiI73i8WsmbL1CE8O9AiMXm'
+  email: manager@gmail.com
 
-cook:
-  name: ola
+
+host:
+  name: host
   position: host
-  password_digest: "123456"
+  password_digest: '$2a$10$CvaO3mWglr5FATOQ31YkZeHx41JvGMPk.2DkvCanM0geYo7H5.Ucy'
+  email: host@gmail.com
+
 
 cook:
-  name: ola
+  name: cook
   position: cook
-  password_digest: "123456"
+  password_digest: '$2a$10$KwEYHAHJznrqqJwS9goh1uWs9iqusRtbZJCEaBgQfNbJNubbOyUn6'
+  email: cook@gmail.com

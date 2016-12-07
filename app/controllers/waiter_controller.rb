@@ -2,7 +2,7 @@ class WaiterController < ApplicationController
   before_action :require_waiter, only: [:tables, :postOrders , :takeOrder ,:orderStatus, :updateOrderStatus]
   protect_from_forgery
 
-  def initialize 
+  def initialize
   #	object = Table.new(:name => "a", :status => 0)
 	#object.save
 	#object = Meal.new(:name => "chicken BBQ pizza", :description => "with BBQ sause", :price => 40, :number_times_ordered => 0)
@@ -53,12 +53,12 @@ end
 
 def updateTimesMealOrdered(mealId)
   @meal = Meal.find(mealId)
-  number_times_ordered = @meal[:number_times_ordered] +1 
+  number_times_ordered = @meal[:number_times_ordered] +1
   @meal.update(:number_times_ordered => number_times_ordered)
 end
 
 def orderStatus
-  @orderStat = Order.select('id,status,meal_id,table_id').where(status: 1) 
+  @orderStat = Order.select('id,status,meal_id,table_id').where(status: 1)
 end
 
 def updateOrderStatus
@@ -72,5 +72,5 @@ def updateOrderStatus
     end
     redirect_to "/waiter/tables"
   end
-  
+
 end

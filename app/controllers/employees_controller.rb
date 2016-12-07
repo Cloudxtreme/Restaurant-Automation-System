@@ -9,7 +9,7 @@ class EmployeesController < ApplicationController
     if @employee.save
       session[:employee_id] = @employee.id
       if @employee.id == 1
-       redirect_to 'waiter'
+       redirect_to '/waiter/tables'
      elsif @employee.id == 2
        redirect_to 'manager'
      elsif @employee.id == 3
