@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class CookControllerTest < ActionDispatch::IntegrationTest
+  def setup
+   post '/login', params: { session: {email:'cook@gmail.com', password: 'cook' }};
+  end
+
+
   test "should get orders" do
     get cook_orders_url
     assert_response :success
@@ -20,19 +25,19 @@ class CookControllerTest < ActionDispatch::IntegrationTest
   		assert_equal 0, Order.find(id).status
 
   		post cook_postOrder_url, params: {order: { id => "1" }};
-  		
+
   		assert_equal 1, Order.find(id).status
-  	
+
   end
 
   test "should redirect to orders page " do
       id = Order.last.id
 
       post cook_postOrder_url, params: {order: { id => "1" }};
-      
+
       assert_redirected_to cook_orders_url
-    
+
   end
 
-  
+
 end

@@ -50,5 +50,6 @@ class HostsController < ApplicationController
 
     	 end
     	  #..........
+        Order.where(:table_id => keyss).destroy_all
     end
 end

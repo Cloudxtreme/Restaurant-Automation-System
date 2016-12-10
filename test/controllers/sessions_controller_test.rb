@@ -3,6 +3,7 @@ require 'test_helper'
 class SessionsControllerTest < ActionDispatch::IntegrationTest
    test "successfull manager login" do
      post '/login', params: { session: {email:'manager@gmail.com', password: 'manager' }};
+     #puts Employee.last.id
      assert_redirected_to '/manager'
    end
    test "successfull cook login" do

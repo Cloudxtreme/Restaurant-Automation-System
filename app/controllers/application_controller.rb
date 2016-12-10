@@ -12,22 +12,26 @@ class ApplicationController < ActionController::Base
   @current_employee ||= Employee.find(session[:employee_id]) if session[:employee_id]
   end
   def current_manager
-    if  session[:employee_id] == 2
+    @current_employee ||= Employee.find(session[:employee_id]) if session[:employee_id]
+    if  @current_employee.position.eql? 'manager'
         @current_manager ||= Employee.find(session[:employee_id]) if session[:employee_id]
    end
   end
   def current_waiter
-    if  session[:employee_id] == 1
+    @current_employee ||= Employee.find(session[:employee_id]) if session[:employee_id]
+    if   @current_employee.position.eql? 'waiter'
         @current_waiter ||= Employee.find(session[:employee_id]) if session[:employee_id]
    end
   end
   def current_cook
-    if  session[:employee_id] == 4
+    @current_employee ||= Employee.find(session[:employee_id]) if session[:employee_id]
+    if   @current_employee.position.eql? 'cook'
         @current_cook ||= Employee.find(session[:employee_id]) if session[:employee_id]
    end
   end
   def current_host
-    if  session[:employee_id] == 3
+    @current_employee ||= Employee.find(session[:employee_id]) if session[:employee_id]
+    if   @current_employee.position.eql? 'host'
         @current_host ||= Employee.find(session[:employee_id]) if session[:employee_id]
    end
   end

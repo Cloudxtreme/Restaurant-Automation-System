@@ -3,8 +3,7 @@ require 'test_helper'
 class WaiterControllerTest < ActionDispatch::IntegrationTest
 
   def setup
-    @waiter_id = Employee.all[0]
-  #  post login_url , params: {session: { "email" => employees(:waiter).email , "password"=> employees(:waiter).password_digest }};
+   post '/login', params: { session: {email:'waiter@gmail.com', password: 'waiter' }};
   end
 
   test "should get takeOrder" do
@@ -52,9 +51,9 @@ class WaiterControllerTest < ActionDispatch::IntegrationTest
    after_order = Meal.find(meal_id).number_times_ordered
    assert_not_equal before_order, after_order
  end
-  
+
   test"should updateOrder status to delivered when waiter delivers orders" do
-   
+
     table_id = Table.last.id
     meal_id = Meal.last.id
     order1 = Order.create(:status => 1 , :table_id => table_id , :meal_id => meal_id)
@@ -65,5 +64,5 @@ class WaiterControllerTest < ActionDispatch::IntegrationTest
     assert_equal 2, Order.find(id2).status
     assert_equal 2, Order.find(id1).status
  end
-  
+
 end

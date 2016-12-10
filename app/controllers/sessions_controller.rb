@@ -7,13 +7,13 @@ class SessionsController < ApplicationController
   @employee = Employee.find_by_email(params[:session][:email])
   if @employee && @employee.authenticate(params[:session][:password])
     session[:employee_id] = @employee.id
-    if session[:employee_id] == 1
+    if  @employee.position.eql? 'waiter'
     redirect_to '/waiter/tables'
-   elsif session[:employee_id] == 2
+  elsif @employee.position.eql? 'manager'
       redirect_to '/manager'
-   elsif session[:employee_id] == 3
+   elsif @employee.position.eql? 'host'
         redirect_to '/host'
-   elsif session[:employee_id] == 4
+   elsif  @employee.position.eql? 'cook'
           redirect_to '/cook/orders'
    end
   else
