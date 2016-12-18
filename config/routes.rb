@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'manager/main'
+
+  get 'manager/draw_rates'
+
+  get 'manager/top_dishes'
+
   get 'waiter/orderStatus'
   post 'waiter/updateOrderStatus'
   post 'waiter/updateStatusOrders2'
