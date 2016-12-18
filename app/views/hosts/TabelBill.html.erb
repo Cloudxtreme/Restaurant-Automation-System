@@ -2,6 +2,19 @@
 <%= link_to("checkin","/hosts/checkin") %>
 <%= link_to("checkout","/hosts/checkout") %>
 <%= link_to("Tables Statuses","/host") %><h1>Tabel Bill</h1>
+<form  action="/hosts/rate" method="post" >
+				<td><input id= "1" name= rateVal type="radio" value="1" /></td>
+				<td><label for="1">1</label></td>
+				<td><input id= "2" name= rateVal type="radio" value="2" /></td>
+				<td><label for="2">2</label></td>
+				<td><input id= "3" name= rateVal  type="radio" value="3" /></td>
+				<td><label for="3">3</label></td>
+				<td><input id= "4" name= rateVal  type="radio" value="4" /></td>
+				<td><label for="4">4</label></td>
+				<td><input id= "5" name= rateVal  type="radio" value="5" /></td>
+				<td><label for="5">5</label></td>
+				<input type="hidden" value=<%= @myID %> name="table_id"/>
+				<td><input  type="submit"   /></td>
 <table>
 
 	<thead>
@@ -18,6 +31,7 @@
              	<th><%= d.price %></th>
              </tr>
          <% end %>
+
 	</tbody>
 
 
