@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class ManagerControllerTest < ActionDispatch::IntegrationTest
+  
+  #  def setup
+  #  post '/login', params: { session: {email:'manager@gmail.com', password: 'manager' }};
+  # end
+
   test "should get main" do
     get manager_main_url
     assert_response :success
@@ -15,5 +20,7 @@ class ManagerControllerTest < ActionDispatch::IntegrationTest
     get manager_top_dishes_url
     assert_response :success
   end
+
+
 
 end

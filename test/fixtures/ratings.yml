@@ -2,8 +2,20 @@
 
 one:
   num_stars: 1
-  num_times_rated: 1
+  num_times_rated: 100
 
 two:
-  num_stars: 1
-  num_times_rated: 1
+  num_stars: 2
+  num_times_rated: 10
+
+three:
+  num_stars: 3
+  num_times_rated: 10
+
+four:
+  num_stars: 4
+  num_times_rated: 10
+
+five:
+  num_stars: 5
+  num_times_rated: 10

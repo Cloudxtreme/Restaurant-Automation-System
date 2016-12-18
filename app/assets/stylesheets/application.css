@@ -13,9 +13,4 @@
  *= require_tree .
  *= require_self
  */
- @import 'bootstrap-sprockets';
-@import 'bootstrap';
 
-th, td {
-    border-bottom: 1px solid #ddd;
-}

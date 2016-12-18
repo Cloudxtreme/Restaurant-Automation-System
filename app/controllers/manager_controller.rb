@@ -1,5 +1,5 @@
 class ManagerController < ApplicationController
-	  #before_action :require_manager, only: [:main, :draw_rates , :top_dishes]
+	 # before_action :require_manager, only: [:main, :draw_rates , :top_dishes]
   
   def main
   end
