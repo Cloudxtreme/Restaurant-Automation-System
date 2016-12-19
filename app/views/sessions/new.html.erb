@@ -1,9 +1,19 @@
-
+<div style="margin-left:570px;margin-top:250px;">
 <% if current_employee %>
 <%else%>
   <%= form_for(:session, url: login_path) do |f| %>
-    <%= f.email_field :email, :placeholder => "Email" %>
-    <%= f.password_field :password, :placeholder => "Password" %>
-    <%= f.submit "Log in", class: "btn-submit" %>
+  <div>
+    <%= f.email_field :email, :placeholder => "Email" ,  :style => "width:300px;height:35px;border: 2px solid #555555;  border-radius: 8px;" %>
+  </div>
+  <br/>
+  <div>
+    <%= f.password_field :password, :placeholder => "Password",  :style => "width:300px;height:35px;border: 2px solid #555555;  border-radius: 8px;" %>
+  </div>
+  <br/>
+  <br/>
+  <div style="margin-left:100px;" >
+    <%= f.submit "Log in", class: "button button5"%>
+  </div>
   <% end %>
 <%end%>
+</div>

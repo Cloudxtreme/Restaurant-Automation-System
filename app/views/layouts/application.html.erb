@@ -9,7 +9,41 @@
           body {
             margin: 0;
             padding: 0;
-            background: #ccc;
+            <% if current_employee %>
+              background-image: url(/assets/nav5.jpg);
+              background-repeat:no-repeat;
+              background-size:cover;
+            <%else%>
+              background-image: url(/assets/back.jpg);
+              background-repeat:no-repeat;
+              background-size:cover;
+            <%end%>
+          }
+          .button {
+              background-color: #4CAF50; /* Green */
+              border: none;
+              color: white;
+              padding: 16px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              -webkit-transition-duration: 0.4s; /* Safari */
+              transition-duration: 0.4s;
+              cursor: pointer;
+          }
+          .button5 {
+              background-color: white;
+              color: black;
+              border: 2px solid #555555;
+              border-radius: 8px;
+          }
+
+          .button5:hover {
+              background-color: #555555;
+              color: white;
+              box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
           }
 
           .nav ul {
@@ -78,11 +112,12 @@
   </head>
   <body>
     <header >
-     <div class="nav" >
        <% if current_employee %>
+       <div class="nav" >
+
               <% if current_employee.position.eql? "host" %>
                        <ul >
-                         <li style="float:left;color: #005f5f;margin-left:40px;font-size:1.8em;"><%= current_employee.position %></li>
+                         <li style="float:left;color: red;margin-left:40px;font-size:1.8em;"><%= current_employee.position %></li>
                          <li> <%= link_to("Check In","/hosts/checkin") %> </li>
                          <li> <%= link_to("Check Out","/hosts/checkout") %> </li>
                          <li> <%= link_to("Tables","/host") %> </li>
@@ -91,7 +126,7 @@
                        </ul>
               <% elsif current_employee.position.eql? "manager" %>
                       <ul >
-                        <li style="float:left;color: #005f5f;margin-left:40px;font-size:1.8em;"><%= current_employee.position %></li>
+                        <li style="float:left;color:red;margin-left:40px;font-size:1.8em;"><%= current_employee.position %></li>
 
                         <li style="margin-left:70px;"> <%= link_to "Ratings",manager_draw_rates_path%> </li>
                         <li>  <%= link_to "Top Dishes",manager_top_dishes_path%> </li>
@@ -100,23 +135,24 @@
               <% elsif current_employee.position.eql? "waiter" %>
 
                       <ul >
-                        <li style="float:left;color: #005f5f;margin-left:40px;font-size:1.8em;"><%= current_employee.position %></li>
+                        <li style="float:left;color: red;margin-left:40px;font-size:1.8em;"><%= current_employee.position %></li>
                         <li><%= link_to "Deliveries",waiter_orderStatus_path%></li>
                         <li><%= link_to "New Order",waiter_tables_path%></li>
                         <li style="float:right;" ><%= link_to "Log out", logout_path, method: "delete" %></li>
                       </ul>
               <% elsif current_employee.position.eql? "cook" %>
                         <ul >
-                          <li style="float:left;color: #005f5f;margin-left:40px;font-size:1.8em;"><%= current_employee.position %></li>
+                          <li style="float:left;color: red ;margin-left:40px;font-size:1.8em;"><%= current_employee.position %></li>
                           <li style="float:right;" ><%= link_to "Log out", logout_path, method: "delete" %></li>
                         </ul>
 
               <%else%>
               <% end %>
+            </div>
 
        <%else%>
+
        <% end %>
-     </div>
    </header>
 <br/>
 <br/>
