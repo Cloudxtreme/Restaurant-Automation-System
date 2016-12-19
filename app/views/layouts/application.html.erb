@@ -12,9 +12,10 @@
         <li><%= current_employee.email %></li>
         <li><%= link_to "Log out", logout_path, method: "delete"%></li>
       </ul>
-      <%else%>
-    
+    <%else%>
+
     <% end %>
+    
     <%= yield %>
   </body>
 </html>

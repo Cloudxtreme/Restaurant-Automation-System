@@ -2,21 +2,6 @@ class WaiterController < ApplicationController
   before_action :require_waiter, only: [:tables, :postOrders , :takeOrder ,:orderStatus, :updateOrderStatus]
   protect_from_forgery
 
-  def initialize
-  #	object = Table.new(:name => "a", :status => 0)
-	#object.save
-	#object = Meal.new(:name => "chicken BBQ pizza", :description => "with BBQ sause", :price => 40, :number_times_ordered => 0)
-	#object.save
-	#object = Meal.new(:name => "sausage pizza", :description => "with sausage", :price => 40, :number_times_ordered => 0)
-	#object.save
-	#object = Meal.new(:name => "chicken pizza", :description => "with chicken :D", :price => 40, :number_times_ordered => 0)
-	#object.save
-	#object = Meal.new(:name => "white sause pasta", :description => "with mashroom & chickes", :price => 50, :number_times_ordered => 0)
-	#object.save
-	#object = Meal.new(:name => "red sause pasta", :description => "with ay 7aga ba2a ", :price => 40, :number_times_ordered => 0)
-	#object.save
-
-end
 
 
 def saveOrder( table_id,mealId)
