@@ -1,26 +1,44 @@
 <div>
-<h1>Ready Meals at cook to be delivered:</h1>
+<h1 style="margin-left: 550px;font-size:xx-large;">Ready Meals For Delivery</h1>
 
-<p> Mark and submit meals delivered from cook to tables </p>
 <form  action="/waiter/updateOrderStatus" method="post" >
 <table>
   <thead>
     <tr>
       <th>Table</th>
       <th>Meal</th>
+      <th>Select</th>
     </tr>
   </thead>
 
   <tbody>
     <% @orderStat.each do |p| %>
       <tr>
-      	<td><center><input type="checkbox" name="order[<%=p.id %>]" value="1" /></center></td>
         <td><center><%= Table.find(p.table_id).name %></center></td>
         <td><center><%= Meal.find(p.meal_id).name %></center></td>
+        <td><center><input type="checkbox" name="order[<%=p.id %>]" value="1" /></center></td>
+
         </tr>
     <% end %>
   </tbody>
 </table>
-<input input = "Sub" type="submit"  />
+<% if @orderStat.any? %>
+  <input type="submit" , style = "margin-left:550px;
+                                  border: none;
+                                  color: white;
+                                  padding: 16px 32px;
+                                  text-align: center;
+                                  text-decoration: none;
+                                  display: inline-block;
+                                  font-size: 16px;
+                                  -webkit-transition-duration: 0.4s; /* Safari */
+                                  transition-duration: 0.4s;
+                                  cursor: pointer;
+                                  background-color: white;
+                                  color: black;
+                                  border: 2px solid #555555;
+                                  border-radius: 8px;">
+<%else%>
+<%end%>
 </br>
 </div>

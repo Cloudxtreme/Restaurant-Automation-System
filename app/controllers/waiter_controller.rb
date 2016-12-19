@@ -21,6 +21,8 @@ def takeOrder
 end
 
 def postOrders
+  if params[:orders].nil?
+  else
   meals = params[:orders].keys
   quantity = params[:repitations]
   table_id = params[:table_id]
@@ -32,8 +34,8 @@ def postOrders
       updateTimesMealOrdered(mealId)
     end
   end
-
   redirect_to "/waiter/tables"
+  end
 end
 
 def updateTimesMealOrdered(mealId)
@@ -47,7 +49,8 @@ def orderStatus
 end
 
 def updateOrderStatus
-
+if params[:order].nil?
+else
   keyss = params[:order].keys
     i = 0
     while keyss[i] != nil
@@ -55,7 +58,7 @@ def updateOrderStatus
       @order.update(:status => 2)
       i = i+1
     end
-    redirect_to "/waiter/tables"
+  end
   end
 
 end

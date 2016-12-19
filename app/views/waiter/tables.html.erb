@@ -1,12 +1,12 @@
 <div>
 
-<h1>Place A new Order</h1>
+<h1 style="margin-left: 550px;font-size:xx-large;" >New Order</h1>
 
-<table style = "width: 50%; background: '/assets/logo.png';">
+<table >
   <thead>
     <tr>
-      <th>table number</th>
-      <th>order</th>
+      <th>Table Number</th>
+      <th>Place Order</th>
 
     </tr>
   </thead>
@@ -14,8 +14,12 @@
   <tbody>
     <% @tables.each do |table| %>
       <tr>
-        <td style= "border-bottom: 1px solid #ddd;"><center><%= table.id %></center></td>
-        <td style= "border-bottom: 1px solid #ddd;"><center><%= link_to 'Take Order', waiter_takeOrder_path(:tableId => table.id) %></center></td>
+        <td ><center><%= table.id %></center></td>
+        <% if table.status == false %>
+        <td><center>Empty Table</center> </td >
+        <%else%>
+        <td ><center><%= link_to 'Take Order', waiter_takeOrder_path(:tableId => table.id) %></center></td>
+        <%end%>
         </tr>
     <% end %>
   </tbody>
