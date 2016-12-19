@@ -8,8 +8,11 @@ class CookController < ApplicationController
 
 
   def postOrder
-  	done = params[:order].keys
-  	updateOrderStatus(done)
+    if params[:order].nil?
+    else
+      done = params[:order].keys
+      updateOrderStatus(done)
+    end
   	redirect_to "/cook/orders"
   end
 
