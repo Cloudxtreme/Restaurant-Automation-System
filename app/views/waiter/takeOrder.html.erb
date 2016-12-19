@@ -1,6 +1,8 @@
 <div>
 
 <h1>Place a new order for table <%= @table_id %> </h1>
+<%= link_to "Back",waiter_tables_path%>
+
 
 <form  action="/waiter/postOrders" method="post" >
 <table>
@@ -31,5 +33,4 @@
 <input type="hidden" value=<%= @table_id %> name="table_id"/>
 <input  type="submit"   />
 </form>
-<%= link_to "Back to choose another table to place order",waiter_tables_path%>
 </div>

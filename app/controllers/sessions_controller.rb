@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if  @employee.position.eql? 'waiter'
       redirect_to '/waiter/tables'
   elsif @employee.position.eql? 'manager'
-      redirect_to '/manager/main'
+      redirect_to '/manager/draw_rates'
    elsif @employee.position.eql? 'host'
       redirect_to '/host'
    elsif  @employee.position.eql? 'cook'
