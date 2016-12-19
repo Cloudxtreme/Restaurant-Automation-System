@@ -1,16 +1,22 @@
 
-<h2>Free Tables </h2>
-
+<h1 style="margin-left: 550px;font-size:xx-large;" >Tables Statuses </h1>
+<div style=" overflow: hidden;font-weight:bold;">
+<div style=" float:left; width: 500px;">
+  <h2 style="color: #005f5f;"> Free Tables </h2>
 <% Array(@avail_tables).each do |table| %>
   <tr>
     <td><%= table.name %><td>
     </br>
   </tr>
 <% end %>
-<h2> Busy Tables </h2>
+</div>
+<div >
+<h2 style="color: #005f5f;"> Busy Tables </h2>
 <% Array(@busy_tables).each do |table| %>
   <tr>
     <td><%= table.name %><td>
     </br>
   </tr>
 <% end %>
+</div>
+</div>

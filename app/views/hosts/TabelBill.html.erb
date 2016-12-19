@@ -1,5 +1,8 @@
 
-<h1>Tabel Bill</h1>
+<h1 style="margin-left: 550px;font-size:xx-large;">Check Out Table: <%@TabelId %></h1>
+
+<h2> Submit Rating </h2>
+<br/>
 <form  action="/hosts/rate" method="post" >
 				<td><input id= "1" name= rateVal type="radio" value="1" /></td>
 				<td><label for="1">1</label></td>
@@ -13,6 +16,10 @@
 				<td><label for="5">5</label></td>
 				<input type="hidden" value=<%= @myID %> name="table_id"/>
 				<td><input  type="submit"   /></td>
+				<br/>
+			  <br/>
+<h2>Table Bill</h2>
+
 <table>
 
 	<thead>
@@ -35,9 +42,3 @@
 
 </table>
 <h3>Total = <%= @sum%></h3>
-
-
-
-
-<%= link_to("checkin","/hosts/checkin") %>
-<%= link_to("checkout","/hosts/checkout") %>

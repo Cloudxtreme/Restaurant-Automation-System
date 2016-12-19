@@ -1,18 +1,18 @@
-<h1>Free Tables</h1>
+<h1  style="margin-left: 550px;font-size:xx-large;">Check Out</h1>
 <table>
 
 	<thead>
 		 <tr>
 		     <th>Table </th>
-		     <th>Bill</th>
+		     <th>Check Out</th>
 		 </tr>
 	</thead>
 
 	<tbody>
          <% @checkOutTabels.each do |t| %>
              <tr>
-             	<th><%= t.name %></th>
-             	<td><%= button_to 'bill', {:controller => "hosts", :action => "TabelBill", :tabel_id => t.id, :method=>:post}  %></td>
+             	<td><%= t.name %></td>
+							<td>		<%= button_to 'Check Out', {:controller => "hosts", :action => "TabelBill", :tabel_id => t.id, :method=>:post}  %></td>
 
              </tr>
          <% end %>

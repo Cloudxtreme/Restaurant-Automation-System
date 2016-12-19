@@ -1,19 +1,19 @@
 
-<h1>Available tables</h1>
+<h1 style="margin-left: 550px;font-size:xx-large;" >Check In</h1>
 <table>
 
 	<thead>
 		 <tr>
 		     <th>Table </th>
-		     <th>Reserved</th>
+		     <th>Reservations</th>
 		 </tr>
 	</thead>
 
 	<tbody>
          <%@tabels.each do |t| %>
              <tr>
-             	<th><%= t.name %></th>
-             	<td><%= button_to 'Reserved', {:controller => "hosts", :action => "updateStatusTables", :tabel_id => t.id, :method=>:post}  %></td>
+             	<td><%= t.name %></td>
+             	<td><%= button_to 'Reserve', {:controller => "hosts", :action => "updateStatusTables", :tabel_id => t.id, :method=>:post}  %></td>
 
 
              </tr>
