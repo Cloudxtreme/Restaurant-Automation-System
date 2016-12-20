@@ -44,5 +44,12 @@ class ManagerController < ApplicationController
   end
 
   def top_dishes
+
+           @first =Meal.order("number_times_ordered DESC").first
+           @second=Meal.order("number_times_ordered DESC").second
+           @third =Meal.order("number_times_ordered DESC").third
+
+
   end
+
 end
