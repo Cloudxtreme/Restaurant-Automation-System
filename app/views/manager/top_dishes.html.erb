@@ -1,4 +1,44 @@
 <div>
 <h1>Manager#top_dishes</h1>
-<p>Find me in app/views/manager/top_dishes.html.erb</p>
+<%= link_to "Back",manager_main_path%>
+
+
+<table>
+
+	<thead>
+		 <tr>
+		 	 <th>   #   </th>
+		     <th>Name </th>
+		     <th>#Ordered</th>
+		     <th>Description</th>
+		     <th>Price</th>
+		 </tr>
+	</thead>
+
+	<tbody>
+             <tr>
+             	<th>   1   </th>
+             	<th><%= @first.name %></th>
+             	<th><%= @first.number_times_ordered %></th>
+             	<th><%= @first.description %></th>
+             	<th><%= @first.price %></th>
+             </tr>
+             <tr>
+             	<th>   2   </th>
+             	<th><%= @second.name %></th>
+             	<th><%= @second.number_times_ordered %></th>
+             	<th><%= @second.description %></th>
+             	<th><%= @second.price %></th>
+             </tr>
+                 <tr>
+                <th>   3   </th>
+             	<th><%= @third.name %></th>
+             	<th><%= @third.number_times_ordered %></th>
+             	<th><%= @third.description %></th>
+             	<th><%= @third.price %></th>
+             </tr>
+	</tbody>
+
+
+</table>
 </div>
