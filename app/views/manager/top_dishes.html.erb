@@ -1,15 +1,14 @@
 <div>
-<h1>Manager#top_dishes</h1>
-<%= link_to "Back",manager_main_path%>
+<h1 style="margin-left: 550px;font-size:xx-large;" >Top Dishes Ordered</h1>
 
 
 <table>
 
 	<thead>
 		 <tr>
-		 	 <th>   #   </th>
+		 	 <th>   Rank  </th>
 		     <th>Name </th>
-		     <th>#Ordered</th>
+		     <th>Order Frequency</th>
 		     <th>Description</th>
 		     <th>Price</th>
 		 </tr>
@@ -17,25 +16,25 @@
 
 	<tbody>
              <tr>
-             	<th>   1   </th>
-             	<th><%= @first.name %></th>
-             	<th><%= @first.number_times_ordered %></th>
-             	<th><%= @first.description %></th>
-             	<th><%= @first.price %></th>
+             	<td>   1   </td>
+             	<td><%= @first.name %></td>
+             	<td><%= @first.number_times_ordered %></td>
+             	<td><%= @first.description %></td>
+             	<td><%= @first.price %></td>
              </tr>
              <tr>
-             	<th>   2   </th>
-             	<th><%= @second.name %></th>
-             	<th><%= @second.number_times_ordered %></th>
-             	<th><%= @second.description %></th>
-             	<th><%= @second.price %></th>
+             	<td>   2   </td>
+             	<td><%= @second.name %></td>
+             	<td><%= @second.number_times_ordered %></td>
+             	<td><%= @second.description %></td>
+             	<td><%= @second.price %></td>
              </tr>
                  <tr>
-                <th>   3   </th>
-             	<th><%= @third.name %></th>
-             	<th><%= @third.number_times_ordered %></th>
-             	<th><%= @third.description %></th>
-             	<th><%= @third.price %></th>
+                <td>   3   </td>
+             	<td><%= @third.name %></td>
+             	<td><%= @third.number_times_ordered %></td>
+             	<td><%= @third.description %></td>
+             	<td><%= @third.price %></td>
              </tr>
 	</tbody>
 

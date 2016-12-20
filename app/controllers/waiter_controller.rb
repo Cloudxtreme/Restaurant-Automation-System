@@ -59,6 +59,8 @@ else
       i = i+1
     end
   end
+  redirect_to "/waiter/tables"
+
   end
 
 end

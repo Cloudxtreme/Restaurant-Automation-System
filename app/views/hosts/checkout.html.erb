@@ -12,6 +12,7 @@
          <% @checkOutTabels.each do |t| %>
              <tr>
              	<td><%= t.name %></td>
+
 							<td>		<%= button_to 'Check Out', {:controller => "hosts", :action => "TabelBill", :tabel_id => t.id, :method=>:post}  %></td>
 
              </tr>

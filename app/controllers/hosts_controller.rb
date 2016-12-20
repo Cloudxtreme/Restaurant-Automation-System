@@ -55,7 +55,7 @@ class HostsController < ApplicationController
     end
 
     def rate
-      
+
       rateVal = params[:rateVal]
       #id = params[:table_id]
       i = 0
